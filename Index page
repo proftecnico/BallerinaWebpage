@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudio de Danzas Ballerina</title>
+  <meta name="description" content="Clases de danza clásica, árabe, contemporáneo, jazz y más en Estudio Ballerina. ¡Vení a bailar con nosotras!">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font: Playfair Display (elegante) + Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .logo-anim {
+      animation: float 6s ease-in-out infinite, appear 2s ease-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes appear {
+      0% { opacity: 0; transform: scale(0.5) translateY(50px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .sparkle {
+      position: absolute;
+      background: rgba(255,192,203,0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkle 2s linear forwards;
+    }
+    @keyframes sparkle {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-pink-50 text-gray-800 overflow-x-hidden">
+
+  <!-- Animación de bienvenida con logo -->
+  <div id="splash" class="fixed inset-0 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center z-50">
+    <img src="https://instagram.feze8-1.fna.fbcdn.net/v/t51.2885-19/473790174_614224311144968_7959075124694192872_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.feze8-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QExMdclFaEAb43Fs2kwTq4Hl7sEwZ_W3ihV7OwMyY3TK_iFm1Do00FGInpABATBWrs&_nc_ohc=wPT5EqZ3hakQ7kNvwE_plm2&_nc_gid=c2x83NJVvLF8rVH1rotfLA&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfhwlpycnfKwf7_Ox0-JUAvyvDE-4turXzgKKqmiBK9V5A&oe=69243FE3&_nc_sid=22de04" alt="Logo Ballerina" class="w-80 logo-anim drop-shadow-2xl">
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-md z-40">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="https://i.ibb.co/6gZfKzB/ballerina-logo.png" alt="Ballerina" class="h-16">
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="hover:text-pink-600 transition">Inicio</a>
+        <a href="#nosotras" class="hover:text-pink-600 transition">Nosotras</a>
+        <a href="#clases" class="hover:text-pink-600 transition">Clases</a>
+        <a href="#ubicacion" class="hover:text-pink-600 transition">Ubicación</a>
+        <a href="#contacto" class="hover:text-pink-600 transition">Contacto</a>
+      </nav>
+      <a href="https://instagram.com/tuinstagram" target="_blank" class="text-pink-600 text-2xl"><i class="fab fa-instagram"></i></a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="pt-24 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-pink-100 to-white">
+    <h1 class="text-5xl md:text-7xl font-bold text-pink-800 mb-6">Estudio de Danzas<br><span class="text-6xl md:text-8xl text-pink-600">Ballerina</span></h1>
+    <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10">Donde cada paso cuenta una historia.<br>Clases para todas las edades y niveles.</p>
+    <a href="#clases" class="bg-pink-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-pink-700 transition shadow-lg">¡Reservá tu clase de prueba!</a>
+  </section>
+
+  <!-- Carrusel de clases -->
+  <section id="clases" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Nuestras Clases</h2>
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+        <div class="carousel flex transition-transform duration-500 ease-in-out" id="carousel">
+          <!-- Cambiá estas imágenes por las tuyas reales -->
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86319498?w=1200" alt="Danza Clásica" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072b81b6a?w=1200" alt="Danza Árabe" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1551934305-b2dc352c0e83?w=1200" alt="Jazz Lyrical" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1581595220364-2fd5e74e9af9?w=1200" alt="Contemporáneo" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1574702581818-3c2ea44b2f49?w=1200" alt="Niñas bailando" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+        </div>
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <button onclick="currentSlide(0)" class="w-3 h-3 bg-pink-600 rounded-full"></button>
+          <button onclick="currentSlide(1)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(2)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(3)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(4)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotras -->
+  <section id="nosotras" class="py-20 bg-pink-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Sobre Ballerina</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <p class="text-lg leading-relaxed text-gray-700">
+            Desde 2021, Estudio de Danzas Ballerina es un espacio lleno de pasión, disciplina y amor por la danza. 
+            Fundado por Abril Scotto, hemos formado generaciones de bailarinas que hoy brillan en escenarios.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700 mt-6">
+            Creemos que la danza es para todas las edades y cuerpos. Acá no solo aprendés técnica: descubrís tu propia voz a través del movimiento.
+          </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1518614368383-2f99d83b08d3?w=800" alt="Historia Ballerina" class="rounded-2xl shadow-xl">
+      </div>
+
+      <h3 class="text-3xl md:text-5xl text-center font-bold text-pink-700 mb-12">Nuestras Profesoras</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Repetir este bloque por cada profe -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center">
+          <img src="https://images.unsplash.com/photo-1574607383472-7d58042fd703?w=600" alt="Profe 1" class="w-full h-80 object-cover">
+          <div class="p-6">
+            <h4 class="text-2xl font-bold text-pink-700">Abril Scotto</h4>
+            <p class="text-pink-600">Directora • Danza Clásica & Contemporáneo</p>
+            <p class="text-gray-600 mt-3">20 años de experiencia. Ex bailarina del Teatro Colón.</p>
+          </div>
+        </div>
+        <!-- Agregá las otras profesoras igual -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">¿Dónde estamos?</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl font-semibold mb-4">Roque Sáenz Peña 374, José Marmol, Provincia de Buenos Aires</p>
+          <p class="text-lg text-gray-700">Lunes a Viernes: 16:00 - 22:00 hs<br>Sábados: 09:00 - 13:00 hs</p>
+          <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fnwkgki%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGtvT-d9s-odRyqPVeTyYZ8-lAdPU4Wd6zMPILmIzex8m8U7Tm8kxRj1FcE_aem_F-FlzjYyO6YNNzNYjHALsg&e=AT1UMCO-XN-UgYWPh7IaGkkaP4Pk-V2MZ3QheJcZ1C2qyuFZ0psS4K1AiFXPq8sAQjElHiympNsGEVeFgTf1ilhUECA7YOS4hYV-jX19mg" target="_blank" class="inline-block mt-6 bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp mr-2"></i> ¡Escribinos por WhatsApp!
+          </a>
+        </div>
+        <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.1790846597121!2d-58.38151003039343!3d-34.78791569830556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd33048b89d09%3A0xfb48454825b3cdf9!2sRoque%20S%C3%A1enz%20Pe%C3%B1a%20374%2C%20B1845ALG%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763599463936!5m2!1ses-419!2sar" 
+  class="w-full h-96 md:h-full rounded-2xl shadow-2xl border-4 border-pink-200" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-20 bg-pink-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold text-pink-800 mb-10">¡Te esperamos!</h2>
+      <form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-2xl">
+        <input type="text" placeholder="Nombre y apellido" class="w-full p-4 mb-4 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-600" required>
+        <input type="tel" placeholder="Teléfono" class="w-full p-4 mb-4 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-600" required>
+        <input type="email" placeholder="Email" class="w-full p-4 mb-4 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-600">
+        <textarea placeholder="Mensaje (¿qué disciplina te interesa?)" rows="5" class="w-full p-4 mb-6 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-600"></textarea>
+        <button type="submit" class="bg-pink-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-pink-700 transition">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pink-800 text-white py-10 text-center">
+    <p>© 2025 Estudio de Danzas Ballerina • Todos los derechos reservados</p>
+    <div class="mt-4">
+      <a href="https://www.instagram.com/estudio.danzas_ballerina/" class="text-3xl mx-4"><i class="fab fa-instagram"></i></a>
+      <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fnwkgki%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGtvT-d9s-odRyqPVeTyYZ8-lAdPU4Wd6zMPILmIzex8m8U7Tm8kxRj1FcE_aem_F-FlzjYyO6YNNzNYjHALsg&e=AT1UMCO-XN-UgYWPh7IaGkkaP4Pk-V2MZ3QheJcZ1C2qyuFZ0psS4K1AiFXPq8sAQjElHiympNsGEVeFgTf1ilhUECA7YOS4hYV-jX19mg" class="text-3xl mx-4"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Quitar splash después de 3 segundos
+    setTimeout(() => {
+      document.getElementById('splash').style.opacity = '0';
+      setTimeout(() => document.getElementById('splash').remove(), 1000);
+    }, 3000);
+
+    // Carrusel automático
+    let slideIndex = 0;
+    const slides = document.getElementById('carousel');
+    const totalSlides = slides.children.length;
+
+    function showSlide(n) {
+      slideIndex = (n + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex + 1);
+    }
+
+    function currentSlide(n) {
+      showSlide(n);
+    }
+
+    setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    showSlide(0);
+
+    // Partículas de brillo al hacer scroll (opcional, queda hermoso)
+    window.addEventListener('scroll', () => {
+      if (Math.random() > 0.95) {
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.left = Math.random() * 100 + 'vw';
+        sparkle.style.top = window.scrollY + Math.random() * window.innerHeight + 'px';
+        sparkle.style.width = sparkle.style.height = Math.random() * 10 + 5 + 'px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 2000);
+      }
+    });
+  </script>
+</body>
+</html>
