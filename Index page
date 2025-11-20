@@ -44,13 +44,13 @@
 
   <!-- Animación de bienvenida con logo -->
   <div id="splash" class="fixed inset-0 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center z-50">
-    <img src="https://instagram.feze8-1.fna.fbcdn.net/v/t51.2885-19/473790174_614224311144968_7959075124694192872_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.feze8-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QExMdclFaEAb43Fs2kwTq4Hl7sEwZ_W3ihV7OwMyY3TK_iFm1Do00FGInpABATBWrs&_nc_ohc=wPT5EqZ3hakQ7kNvwE_plm2&_nc_gid=c2x83NJVvLF8rVH1rotfLA&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfhwlpycnfKwf7_Ox0-JUAvyvDE-4turXzgKKqmiBK9V5A&oe=69243FE3&_nc_sid=22de04" alt="Logo Ballerina" class="w-80 logo-anim drop-shadow-2xl">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.OpKl-gwJd2cimS6VEMTMuQHaHg?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo Ballerina" class="w-80 logo-anim drop-shadow-2xl">
   </div>
 
   <!-- Header -->
   <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-md z-40">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="https://i.ibb.co/6gZfKzB/ballerina-logo.png" alt="Ballerina" class="h-16">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.OpKl-gwJd2cimS6VEMTMuQHaHg?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ballerina" class="h-16">
       <nav class="hidden md:flex space-x-8">
         <a href="#inicio" class="hover:text-pink-600 transition">Inicio</a>
         <a href="#nosotras" class="hover:text-pink-600 transition">Nosotras</a>
@@ -100,7 +100,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
         <div>
           <p class="text-lg leading-relaxed text-gray-700">
-            Desde 2021, Estudio de Danzas Ballerina es un espacio lleno de pasión, disciplina y amor por la danza. 
+            Desde 2020, Estudio de Danzas Ballerina es un espacio lleno de pasión, disciplina y amor por la danza. 
             Fundado por Abril Scotto, hemos formado generaciones de bailarinas que hoy brillan en escenarios.
           </p>
           <p class="text-lg leading-relaxed text-gray-700 mt-6">
@@ -114,11 +114,11 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- Repetir este bloque por cada profe -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center">
-          <img src="https://images.unsplash.com/photo-1574607383472-7d58042fd703?w=600" alt="Profe 1" class="w-full h-80 object-cover">
+          <img src="src="https://instagram.feze8-1.fna.fbcdn.net/v/t51.29350-15/118796970_311840336754027_9078363856045630688_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQuaW1hZ2VfdXJsZ2VuLjcyMHg5MDAuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlLmMyIn0&_nc_ht=instagram.feze8-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QFPW-_-lig6TpyLApz2eLDghy0q92-Z7HWbCGu_Sk5n2WSxtsbw28O0XHTtnMHPdDo&_nc_ohc=H8Tl_IB8H_IQ7kNvwGL0VZ-&_nc_gid=Pnm5Lyaw591WpUeo9FiabA&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MjM5MjMxMzMyOTQyMDIyNjc2OA%3D%3D.3-ccb7-5&oh=00_AfheFPrqNmNu2AL40_aI5_oT6iUzKSMuCTbDSxjKgnnoPw&oe=692432EC&_nc_sid=7a9f4b"" alt="Profe 1" class="w-full h-80 object-cover">
           <div class="p-6">
             <h4 class="text-2xl font-bold text-pink-700">Abril Scotto</h4>
-            <p class="text-pink-600">Directora • Danza Clásica & Contemporáneo</p>
-            <p class="text-gray-600 mt-3">20 años de experiencia. Ex bailarina del Teatro Colón.</p>
+            <p class="text-pink-600">Directora • Ballet • Jazz • Iniciación a la danza & Contemporáneo</p>
+            <p class="text-gray-600 mt-3">20 años de experiencia.</p>
           </div>
         </div>
         <!-- Agregá las otras profesoras igual -->
