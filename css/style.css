@@ -1,0 +1,116 @@
+/* Main Stylesheet for Estudio de Danzas Ballerina */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Premium Color Palette */
+  --primary: #d4a373; /* Champagne Gold */
+  --primary-light: #faedcd;
+  --secondary: #9d0208; /* Deep Burgundy for accents */
+  --pink-soft: #fff0f3; /* Very light pink background */
+  --pink-rose: #ffccd5; /* Rose pink */
+  --pink-deep: #c9184a; /* Vibrant pink */
+  
+  --text-dark: #2f2f2f;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); 
+
+  /* Transitions */
+  --trans-fast: 0.3s ease;
+  --trans-med: 0.5s ease;
+}
+
+/* Base Reset & Typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--pink-soft);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Utility Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Components */
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink-deep), #a4133c);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: transform var(--trans-fast), box-shadow var(--trans-fast);
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 6px -1px rgba(164, 19, 60, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(164, 19, 60, 0.4);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-dark);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all var(--trans-fast);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Section specific overrides */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 1rem;
+}
+
+/* Specific Animations for Ballerina Theme */
+.float-anim {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}

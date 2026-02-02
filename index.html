@@ -1,206 +1,320 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Estudio de Danzas Ballerina</title>
-  <meta name="description" content="Clases de danza clásica, árabe, contemporáneo, jazz y más en José Mármol. ¡Vení a bailar con nosotras!">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
-    .logo-anim {
-      animation: float 6s ease-in-out infinite, appear 2s ease-out;
-    }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-    @keyframes appear { 0% { opacity: 0; transform: scale(0.5) translateY(50px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
-    .sparkle {
-      position: absolute; background: rgba(255,192,203,0.8); border-radius: 50%; pointer-events: none;
-      animation: sparkle 2s linear forwards;
-    }
-    @keyframes sparkle { 0% { transform: scale(0); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
-  </style>
-</head>
-<body class="bg-pink-50 text-gray-800 overflow-x-hidden">
-
-  <!-- Splash con logo -->
-  <div id="splash" class="fixed inset-0 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center z-50">
-    <img src="img/logo.png" alt="Logo Ballerina" class="w-80 logo-anim drop-shadow-2xl">
-  </div>
-
-  <!-- Header -->
-  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-md z-40">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="img/logo.jpeg" alt="Ballerina" class="h-16">
-      <nav class="hidden md:flex space-x-8">
-        <a href="#inicio" class="hover:text-pink-600 transition">Inicio</a>
-        <a href="#nosotras" class="hover:text-pink-600 transition">Nosotras</a>
-        <a href="#clases" class="hover:text-pink-600 transition">Clases</a>
-        <a href="#ubicacion" class="hover:text-pink-600 transition">Ubicación</a>
-        <a href="#contacto" class="hover:text-pink-600 transition">Contacto</a>
-      </nav>
-      <a href="https://www.instagram.com/estudio.danzas_ballerina/" target="_blank" class="text-pink-600 text-2xl"><i class="fab fa-instagram"></i></a>
-    </div>
-	  <a href="entradas.html" class="bg-gradient-to-r from-pink-600 to-pink-700 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl">
-  Entradas Muestra 2026
-</a>
-  </header>
-
-  <!-- Hero -->
-  <section id="inicio" class="pt-24 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-pink-100 to-white">
-    <h1 class="text-5xl md:text-7xl font-bold text-pink-800 mb-6">Estudio de Danzas<br><span class="text-6xl md:text-8xl text-pink-600">Ballerina</span></h1>
-    <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10">Donde cada paso cuenta una historia.<br>Clases para todas las edades y niveles.</p>
-    <a href="#clases" class="bg-pink-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-pink-700 transition shadow-lg">¡Reservá tu clase de prueba!</a>
-  </section>
-
-  <!-- Carrusel de clases -->
-  <section id="clases" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Nuestras Clases</h2>
-      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-        <div class="carousel flex transition-transform duration-500 ease-in-out" id="carousel">
-          <img src="img/clases/arabe_juvenil.jpg" alt="Danza Árabe juvenil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
-          <img src="img/clases/danzas_arabes_infantil.png" alt="Danza Árabe infantil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
-          <img src="img/clases/arabe_adultos.jpg" alt="Danza Árabe adultos" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
-          <img src="img/clases/jazz_infantil.jpg" alt="Jazz infantil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
-          <img src="img/clases/jazz_teens.jpg" alt="Jazz teens" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
-        </div>
-        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
-          <button onclick="currentSlide(0)" class="w-3 h-3 bg-pink-600 rounded-full"></button>
-          <button onclick="currentSlide(1)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
-          <button onclick="currentSlide(2)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
-          <button onclick="currentSlide(3)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
-          <button onclick="currentSlide(4)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- Sobre nosotras -->
-<section id="nosotras" class="py-20 bg-pink-50">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Sobre Ballerina</h2>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Estudio de Danzas Ballerina | Pasión y Disciplina</title>
+    <meta name="description" content="Clases de danza clásica, árabe, contemporáneo y jazz en José Mármol. Formamos bailarinas con pasión y excelencia desde 2020.">
     
-    <!-- Historia -->
-    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <div>
-        <p class="text-lg leading-relaxed text-gray-700">
-          Desde 2020, Estudio de Danzas Ballerina es un espacio lleno de pasión, disciplina y amor por la danza.<br>
-          Fundado por <strong>Abril Scotto</strong>, hemos formado generaciones de bailarinas que hoy brillan en escenarios nacionales.
-        </p>
-        <p class="text-lg leading-relaxed text-gray-700 mt-6">
-          Creemos que la danza es para todas las edades y cuerpos. Acá no solo aprendés técnica: aquí descubrís tu propia voz a través del movimiento.
-        </p>
-      </div>
-      <img src="img/nosotras/estudio.png" alt="Historia Ballerina" class="rounded-2xl shadow-xl object-cover h-96">
-    </div>
+    <!-- External Libs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-pink-50 text-gray-800">
 
-    <!-- Profesoras -->
-    <h3 class="text-3xl md:text-5xl text-center font-bold text-pink-700 mb-12">Nuestras Profesoras</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="img/logo.jpeg" alt="Ballerina Logo" class="h-12 md:h-14 rounded-full shadow-md group-hover:scale-105 transition-transform duration-300">
+                <span class="text-xl md:text-2xl font-bold font-serif text-pink-900 tracking-wide">Ballerina</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-gray-600">
+                <a href="#inicio" class="hover:text-pink-700 transition-colors">INICIO</a>
+                <a href="#nosotras" class="hover:text-pink-700 transition-colors">NOSOTRAS</a>
+                <a href="#clases" class="hover:text-pink-700 transition-colors">CLASES</a>
+                <a href="#contacto" class="hover:text-pink-700 transition-colors">CONTACTO</a>
+                <a href="entradas.html" class="btn-primary ml-4 transform hover:-translate-y-1">
+                    <i class="fas fa-ticket-alt mr-2"></i>Entradas 2026
+                </a>
+            </nav>
 
-      <!-- Profesora 1: Abril -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
-        <img src="img/profes/Abril Scotto.png" alt="Abril Scotto" class="w-full h-80 object-cover">
-        <div class="p-6">
-          <h4 class="text-2xl font-bold text-pink-700">Abril Scotto</h4>
-          <p class="text-pink-600">Directora • Ballet • Jazz • Contemporáneo</p>
-          <p class="text-gray-600 mt-3">20 años de experiencia</p>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-pink-800 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-      </div>
 
-      <!-- Profesora 2: Wandy -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
-        <img src="img/profes/Wandy_Scotto.png" alt="Wandy Scotto" class="w-full h-80 object-cover">
-        <div class="p-6">
-          <h4 class="text-2xl font-bold text-pink-700">Wandy Scotto</h4>
-          <p class="text-pink-600">Profesora • Árabe infantil • Árabe juvenil • Árabe adultos • Urbano infantil</p>
-          <p class="text-gray-600 mt-3">10 años de experiencia</p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl absolute w-full border-t border-pink-100 shadow-xl">
+            <nav class="flex flex-col p-6 space-y-4 text-center font-medium">
+                <a href="#inicio" class="text-gray-700 py-2 hover:text-pink-600">Inicio</a>
+                <a href="#nosotras" class="text-gray-700 py-2 hover:text-pink-600">Nosotras</a>
+                <a href="#clases" class="text-gray-700 py-2 hover:text-pink-600">Clases</a>
+                <a href="#contacto" class="text-gray-700 py-2 hover:text-pink-600">Contacto</a>
+                <a href="entradas.html" class="btn-primary w-full justify-center">Entradas 2026</a>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <!-- Acá vas agregando las demás profesoras, una por bloque -->
-      <!-- Ejemplo para una tercera:
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
-        <img src="img/profes/nombre3.png" alt="Nombre Apellido" class="w-full h-80 object-cover">
-        <div class="p-6">
-          <h4 class="text-2xl font-bold text-pink-700">Nombre Apellido</h4>
-          <p class="text-pink-600">Disciplinas que dicta</p>
-          <p class="text-gray-600 mt-3">Años de experiencia</p>
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div class="absolute top-[20%] left-[-10%] w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-[-10%] left-[20%] w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
         </div>
-      </div>
-      -->
 
-    </div>
-  </div>
-</section>
-
-  <!-- Ubicación -->
-  <section id="ubicacion" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">¿Dónde estamos?</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="text-xl font-semibold mb-4">Roque Sáenz Peña 374<br>José Mármol, Buenos Aires</p>
-          <p class="text-lg text-gray-700">Lunes a Viernes: 16:00 - 22:00 hs<br>Sábados: 09:00 - 13:00 hs</p>
-          <a href="https://wa.link/nwkgki" target="_blank" class="inline-block mt-6 bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition">
-            <i class="fab fa-whatsapp mr-2"></i> ¡Escribinos por WhatsApp!
-          </a>
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left space-y-6 animate-on-scroll">
+                <h2 class="text-pink-600 font-bold tracking-widest uppercase text-sm">Estudio de Danzas</h2>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 leading-tight">
+                    Donde cada paso <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">cuenta una historia</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Descubrí tu potencial en un ambiente profesional y cálido. Clases para todas las edades y niveles en José Mármol.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="#clases" class="btn-primary text-center">Ver Clases</a>
+                    <a href="#contact" class="btn-glass text-center">Contactanos</a>
+                </div>
+            </div>
+            
+            <div class="relative hidden md:block animate-on-scroll delay-200">
+                 <!-- Main Hero Image (using logo.png as placeholder if no hero image exists, ideally should be a high quality dancer photo) -->
+                 <div class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white float-anim">
+                    <img src="img/logo.png" alt="Bailarina Hero" class="w-full h-full object-cover bg-pink-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                 </div>
+                 
+                 <!-- Decoration Card -->
+                 <div class="absolute bottom-10 -left-10 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-pink-100 max-w-xs animate-pulse">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Excelencia</p>
+                            <p class="text-xs text-gray-500">Formación profesional</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.1790846597121!2d-58.38151003039343!3d-34.78791569830556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd33048b89d09%3A0xfb48454825b3cdf9!2sRoque%20S%C3%A1enz%20Pe%C3%B1a%20374%2C%20B1845ALG%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763599463936!5m2!1ses-419!2sar"
-          class="w-full h-96 md:h-full rounded-2xl shadow-2xl border-4 border-pink-200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contacto y Footer (igual que antes) -->
-  <section id="contacto" class="py-20 bg-pink-100">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-6xl font-bold text-pink-800 mb-10">¡Te esperamos!</h2>
-      <form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-2xl">
-        <input type="text" placeholder="Nombre y apellido" class="w-full p-4 mb-4 border border-pink-300 rounded-lg" required>
-        <input type="tel" placeholder="Teléfono" class="w-full p-4 mb-4 border border-pink-300 rounded-lg" required>
-        <input type="email" placeholder="Email" class="w-full p-4 mb-4 border border-pink-300 rounded-lg">
-        <textarea placeholder="Mensaje (¿qué disciplina te interesa?)" rows="5" class="w-full p-4 mb-6 border border-pink-300 rounded-lg"></textarea>
-        <button type="submit" class="bg-pink-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-pink-700 transition">Enviar mensaje</button>
-      </form>
-    </div>
-  </section>
+    <!-- Clases Section -->
+    <section id="clases" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Nuestras Clases</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Explorá nuestras disciplinas diseñadas para potenciar tu talento, desde la iniciación hasta el nivel profesional.</p>
+            </div>
 
-  <footer class="bg-pink-800 text-white py-10 text-center">
-    <p>© 2025 Estudio de Danzas Ballerina • Todos los derechos reservados</p>
-    <div class="mt-4">
-      <a href="https://www.instagram.com/estudio.danzas_ballerina/" target="_blank" class="text-3xl mx-4"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.link/nwkgki" target="_blank" class="text-3xl mx-4"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </footer>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Class Card 1 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/arabe_juvenil.jpg" alt="Arabe Juvenil" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-2xl font-bold mb-1">Danza Árabe</h3>
+                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Juvenil • Técnica y Coreografía</p>
+                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    </div>
+                </div>
 
-  <script>
-    setTimeout(() => document.getElementById('splash').style.opacity = '0' && setTimeout(() => document.getElementById('splash').remove(), 1000), 3000);
+                <!-- Class Card 2 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll delay-100">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/danzas_arabes_infantil.png" alt="Arabe Infantil" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-2xl font-bold mb-1">Iniciación Árabe</h3>
+                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Infantil • Juegos y Ritmo</p>
+                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    </div>
+                </div>
 
-    let slideIndex = 0;
-    const slides = document.getElementById('carousel');
-    const totalSlides = slides.children.length;
-    function showSlide(n) { slideIndex = (n + totalSlides) % totalSlides; slides.style.transform = `translateX(-${slideIndex * 100}%)`; }
-    function nextSlide() { showSlide(slideIndex + 1); }
-    function currentSlide(n) { showSlide(n); }
-    setInterval(nextSlide, 5000);
-    showSlide(0);
+                <!-- Class Card 3 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll delay-200">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/jazz_teens.jpg" alt="Jazz Teens" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-2xl font-bold mb-1">Jazz & Lyrical</h3>
+                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Teens & Adultos • Expresión</p>
+                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contacto" class="inline-flex items-center text-pink-700 font-bold hover:text-pink-900 hover:underline transition">
+                    Ver grilla completa de horarios <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nosotras / Profes section -->
+    <section id="nosotras" class="py-24 bg-gradient-to-b from-pink-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-pink-200 rounded-full opacity-50 z-0"></div>
+                        <img src="img/nosotras/estudio.png" alt="Nuestro Estudio" class="relative z-10 rounded-2xl shadow-2xl w-full object-cover">
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-pink-400 rounded-2xl z-20"></div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 space-y-6 animate-on-scroll delay-200">
+                    <h2 class="text-4xl font-serif font-bold text-gray-900">Sobre Ballerina</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Fundado en 2020 por <strong>Abril Scotto</strong>, nuestro estudio nació con la misión de crear un espacio donde la técnica se encuentra con la pasión.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Más que una academia, somos una familia. Acompañamos a cada alumna en su crecimiento personal y artístico, brindando herramientas para que brillen tanto dentro como fuera del escenario.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-50">
+                            <h4 class="text-3xl font-bold text-pink-600">5+</h4>
+                            <p class="text-sm text-gray-500">Años formando artistas</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-50">
+                            <h4 class="text-3xl font-bold text-pink-600">100%</h4>
+                            <p class="text-sm text-gray-500">Pasión asegurada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    window.addEventListener('scroll', () => {
-      if (Math.random() > 0.95) {
-        const sparkle = document.createElement('div'); sparkle.classList.add('sparkle');
-        sparkle.style.left = Math.random() * 100 + 'vw';
-        sparkle.style.top = window.scrollY + Math.random() * window.innerHeight + 'px';
-        sparkle.style.width = sparkle.style.height = Math.random() * 10 + 5 + 'px';
-        document.body.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 2000);
-      }
-    });
-  </script>
+            <!-- Team -->
+            <div class="mt-24">
+                <h3 class="text-3xl font-serif font-bold text-center mb-12">Equipo Docente</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                    <!-- Profe 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="relative overflow-hidden h-80">
+                            <img src="img/profes/Abril Scotto.png" alt="Abril Scotto" class="w-full h-full object-cover group-hover:scale-105 transition-duration-500">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-pink-900 to-transparent p-6 pt-20">
+                                <h4 class="text-white text-xl font-bold">Abril Scotto</h4>
+                                <p class="text-pink-200 text-sm">Directora & Maestra</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-sm mb-4">Especialista en Danza Clásica, Jazz y Contemporáneo. 20 años de trayectoria formando bailarinas con excelencia.</p>
+                            <div class="flex gap-3 text-pink-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profe 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 animate-on-scroll delay-100">
+                        <div class="relative overflow-hidden h-80">
+                            <img src="img/profes/Wandy_Scotto.png" alt="Wandy Scotto" class="w-full h-full object-cover group-hover:scale-105 transition-duration-500">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-pink-900 to-transparent p-6 pt-20">
+                                <h4 class="text-white text-xl font-bold">Wandy Scotto</h4>
+                                <p class="text-pink-200 text-sm">Profesora</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-sm mb-4">Experta en Danzas Árabes y Urbanas infantiles. Su carisma y paciencia hacen que cada clase sea única.</p>
+                             <div class="flex gap-3 text-pink-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section (Glass effect over map) -->
+    <section id="ubicacion" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center bg-white">
+                    <h3 class="text-3xl font-serif font-bold text-gray-900 mb-6">Donde comienza la magia</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Roque Sáenz Peña 374<br>José Mármol, Bs. As.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Horarios de Atención</h4>
+                                <p class="text-gray-600">Lun - Vie: 16:00 - 22:00 hs<br>Sab: 09:00 - 13:00 hs</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.link/nwkgki" target="_blank" class="btn-primary mt-4 self-start inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> Escribinos
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 min-h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.1790846597121!2d-58.38151003039343!3d-34.78791569830556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd33048b89d09%3A0xfb48454825b3cdf9!2sRoque%20S%C3%A1enz%20Pe%C3%B1a%20374%2C%20B1845ALG%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763599463936!5m2!1ses-419!2sar" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <!-- Col 1 -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="img/logo.jpeg" alt="Logo Footer" class="h-10 rounded-full border border-gray-700">
+                        <span class="text-2xl font-serif font-bold">Ballerina</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-6">
+                        Un espacio dedicado al arte, la disciplina y la pasión por el movimiento. Vení a descubrir tu mejor versión.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/estudio.danzas_ballerina/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.link/nwkgki" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-pink-500">Enlaces</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="#clases" class="hover:text-white transition">Clases</a></li>
+                        <li><a href="#nosotras" class="hover:text-white transition">Nosotras</a></li>
+                        <li><a href="entradas.html" class="hover:text-white transition">Entradas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-pink-500">Contacto</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1"></i> Roque Sáenz Peña 374, José Mármol</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-phone mt-1"></i> +54 9 11 6868-0838</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-envelope mt-1"></i> contacto@ballerina.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Estudio de Danzas Ballerina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
