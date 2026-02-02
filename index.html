@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudio de Danzas Ballerina</title>
+  <meta name="description" content="Clases de danza clásica, árabe, contemporáneo, jazz y más en José Mármol. ¡Vení a bailar con nosotras!">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .logo-anim {
+      animation: float 6s ease-in-out infinite, appear 2s ease-out;
+    }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes appear { 0% { opacity: 0; transform: scale(0.5) translateY(50px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+    .sparkle {
+      position: absolute; background: rgba(255,192,203,0.8); border-radius: 50%; pointer-events: none;
+      animation: sparkle 2s linear forwards;
+    }
+    @keyframes sparkle { 0% { transform: scale(0); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+  </style>
+</head>
+<body class="bg-pink-50 text-gray-800 overflow-x-hidden">
+
+  <!-- Splash con logo -->
+  <div id="splash" class="fixed inset-0 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center z-50">
+    <img src="img/logo.png" alt="Logo Ballerina" class="w-80 logo-anim drop-shadow-2xl">
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-md z-40">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="img/logo.jpeg" alt="Ballerina" class="h-16">
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="hover:text-pink-600 transition">Inicio</a>
+        <a href="#nosotras" class="hover:text-pink-600 transition">Nosotras</a>
+        <a href="#clases" class="hover:text-pink-600 transition">Clases</a>
+        <a href="#ubicacion" class="hover:text-pink-600 transition">Ubicación</a>
+        <a href="#contacto" class="hover:text-pink-600 transition">Contacto</a>
+      </nav>
+      <a href="https://www.instagram.com/estudio.danzas_ballerina/" target="_blank" class="text-pink-600 text-2xl"><i class="fab fa-instagram"></i></a>
+    </div>
+	  <a href="entradas.html" class="bg-gradient-to-r from-pink-600 to-pink-700 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl">
+  Entradas Muestra 2026
+</a>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="pt-24 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-pink-100 to-white">
+    <h1 class="text-5xl md:text-7xl font-bold text-pink-800 mb-6">Estudio de Danzas<br><span class="text-6xl md:text-8xl text-pink-600">Ballerina</span></h1>
+    <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10">Donde cada paso cuenta una historia.<br>Clases para todas las edades y niveles.</p>
+    <a href="#clases" class="bg-pink-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-pink-700 transition shadow-lg">¡Reservá tu clase de prueba!</a>
+  </section>
+
+  <!-- Carrusel de clases -->
+  <section id="clases" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Nuestras Clases</h2>
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+        <div class="carousel flex transition-transform duration-500 ease-in-out" id="carousel">
+          <img src="img/clases/arabe_juvenil.jpg" alt="Danza Árabe juvenil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="img/clases/danzas_arabes_infantil.png" alt="Danza Árabe infantil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="img/clases/arabe_adultos.jpg" alt="Danza Árabe adultos" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="img/clases/jazz_infantil.jpg" alt="Jazz infantil" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+          <img src="img/clases/jazz_teens.jpg" alt="Jazz teens" class="w-full h-96 md:h-screen object-cover flex-shrink-0">
+        </div>
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <button onclick="currentSlide(0)" class="w-3 h-3 bg-pink-600 rounded-full"></button>
+          <button onclick="currentSlide(1)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(2)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(3)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+          <button onclick="currentSlide(4)" class="w-3 h-3 bg-pink-400 rounded-full"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Sobre nosotras -->
+<section id="nosotras" class="py-20 bg-pink-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">Sobre Ballerina</h2>
+    
+    <!-- Historia -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <p class="text-lg leading-relaxed text-gray-700">
+          Desde 2020, Estudio de Danzas Ballerina es un espacio lleno de pasión, disciplina y amor por la danza.<br>
+          Fundado por <strong>Abril Scotto</strong>, hemos formado generaciones de bailarinas que hoy brillan en escenarios nacionales.
+        </p>
+        <p class="text-lg leading-relaxed text-gray-700 mt-6">
+          Creemos que la danza es para todas las edades y cuerpos. Acá no solo aprendés técnica: aquí descubrís tu propia voz a través del movimiento.
+        </p>
+      </div>
+      <img src="img/nosotras/estudio.png" alt="Historia Ballerina" class="rounded-2xl shadow-xl object-cover h-96">
+    </div>
+
+    <!-- Profesoras -->
+    <h3 class="text-3xl md:text-5xl text-center font-bold text-pink-700 mb-12">Nuestras Profesoras</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Profesora 1: Abril -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
+        <img src="img/profes/Abril Scotto.png" alt="Abril Scotto" class="w-full h-80 object-cover">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold text-pink-700">Abril Scotto</h4>
+          <p class="text-pink-600">Directora • Ballet • Jazz • Contemporáneo</p>
+          <p class="text-gray-600 mt-3">20 años de experiencia</p>
+        </div>
+      </div>
+
+      <!-- Profesora 2: Wandy -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
+        <img src="img/profes/Wandy_Scotto.png" alt="Wandy Scotto" class="w-full h-80 object-cover">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold text-pink-700">Wandy Scotto</h4>
+          <p class="text-pink-600">Profesora • Árabe infantil • Árabe juvenil • Árabe adultos • Urbano infantil</p>
+          <p class="text-gray-600 mt-3">10 años de experiencia</p>
+        </div>
+      </div>
+
+      <!-- Acá vas agregando las demás profesoras, una por bloque -->
+      <!-- Ejemplo para una tercera:
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105">
+        <img src="img/profes/nombre3.png" alt="Nombre Apellido" class="w-full h-80 object-cover">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold text-pink-700">Nombre Apellido</h4>
+          <p class="text-pink-600">Disciplinas que dicta</p>
+          <p class="text-gray-600 mt-3">Años de experiencia</p>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-pink-800 mb-16">¿Dónde estamos?</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl font-semibold mb-4">Roque Sáenz Peña 374<br>José Mármol, Buenos Aires</p>
+          <p class="text-lg text-gray-700">Lunes a Viernes: 16:00 - 22:00 hs<br>Sábados: 09:00 - 13:00 hs</p>
+          <a href="https://wa.link/nwkgki" target="_blank" class="inline-block mt-6 bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp mr-2"></i> ¡Escribinos por WhatsApp!
+          </a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.1790846597121!2d-58.38151003039343!3d-34.78791569830556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd33048b89d09%3A0xfb48454825b3cdf9!2sRoque%20S%C3%A1enz%20Pe%C3%B1a%20374%2C%20B1845ALG%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763599463936!5m2!1ses-419!2sar"
+          class="w-full h-96 md:h-full rounded-2xl shadow-2xl border-4 border-pink-200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto y Footer (igual que antes) -->
+  <section id="contacto" class="py-20 bg-pink-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold text-pink-800 mb-10">¡Te esperamos!</h2>
+      <form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-2xl">
+        <input type="text" placeholder="Nombre y apellido" class="w-full p-4 mb-4 border border-pink-300 rounded-lg" required>
+        <input type="tel" placeholder="Teléfono" class="w-full p-4 mb-4 border border-pink-300 rounded-lg" required>
+        <input type="email" placeholder="Email" class="w-full p-4 mb-4 border border-pink-300 rounded-lg">
+        <textarea placeholder="Mensaje (¿qué disciplina te interesa?)" rows="5" class="w-full p-4 mb-6 border border-pink-300 rounded-lg"></textarea>
+        <button type="submit" class="bg-pink-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-pink-700 transition">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-pink-800 text-white py-10 text-center">
+    <p>© 2025 Estudio de Danzas Ballerina • Todos los derechos reservados</p>
+    <div class="mt-4">
+      <a href="https://www.instagram.com/estudio.danzas_ballerina/" target="_blank" class="text-3xl mx-4"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.link/nwkgki" target="_blank" class="text-3xl mx-4"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    setTimeout(() => document.getElementById('splash').style.opacity = '0' && setTimeout(() => document.getElementById('splash').remove(), 1000), 3000);
+
+    let slideIndex = 0;
+    const slides = document.getElementById('carousel');
+    const totalSlides = slides.children.length;
+    function showSlide(n) { slideIndex = (n + totalSlides) % totalSlides; slides.style.transform = `translateX(-${slideIndex * 100}%)`; }
+    function nextSlide() { showSlide(slideIndex + 1); }
+    function currentSlide(n) { showSlide(n); }
+    setInterval(nextSlide, 5000);
+    showSlide(0);
+
+    window.addEventListener('scroll', () => {
+      if (Math.random() > 0.95) {
+        const sparkle = document.createElement('div'); sparkle.classList.add('sparkle');
+        sparkle.style.left = Math.random() * 100 + 'vw';
+        sparkle.style.top = window.scrollY + Math.random() * window.innerHeight + 'px';
+        sparkle.style.width = sparkle.style.height = Math.random() * 10 + 5 + 'px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 2000);
+      }
+    });
+  </script>
+</body>
+</html>
