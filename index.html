@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,6 +31,7 @@
                 <a href="#inicio" class="hover:text-pink-700 transition-colors">INICIO</a>
                 <a href="#nosotras" class="hover:text-pink-700 transition-colors">NOSOTRAS</a>
                 <a href="#clases" class="hover:text-pink-700 transition-colors">CLASES</a>
+                <a href="#horarios" class="hover:text-pink-700 transition-colors">HORARIOS</a>
                 <a href="#contacto" class="hover:text-pink-700 transition-colors">CONTACTO</a>
                 <a href="entradas.html" class="btn-primary ml-4 transform hover:-translate-y-1">
                     <i class="fas fa-ticket-alt mr-2"></i>Entradas 2026
@@ -46,6 +50,7 @@
                 <a href="#inicio" class="text-gray-700 py-2 hover:text-pink-600">Inicio</a>
                 <a href="#nosotras" class="text-gray-700 py-2 hover:text-pink-600">Nosotras</a>
                 <a href="#clases" class="text-gray-700 py-2 hover:text-pink-600">Clases</a>
+                <a href="#horarios" class="text-gray-700 py-2 hover:text-pink-600">Horarios</a>
                 <a href="#contacto" class="text-gray-700 py-2 hover:text-pink-600">Contacto</a>
                 <a href="entradas.html" class="btn-primary w-full justify-center">Entradas 2026</a>
             </nav>
@@ -72,15 +77,15 @@
                 </p>
                 <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start pt-4">
                     <a href="#clases" class="btn-primary text-center">Ver Clases</a>
-                    <a href="#contact" class="btn-glass text-center">Contactanos</a>
+                    <a href="#contacto" class="btn-glass text-center">Contactanos</a>
                 </div>
             </div>
             
             <div class="relative hidden md:block animate-on-scroll delay-200">
-                 <!-- Main Hero Image (using logo.png as placeholder if no hero image exists, ideally should be a high quality dancer photo) -->
-                 <div class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white float-anim">
-                    <img src="img/logo.png" alt="Bailarina Hero" class="w-full h-full object-cover bg-pink-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                 <!-- Main Hero Image -->
+                 <div class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white float-anim bg-pink-50">
+                    <img src="img/logo.png" alt="Bailarina Hero" class="w-full h-full object-contain p-8">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-200/50 to-transparent pointer-events-none"></div>
                  </div>
                  
                  <!-- Decoration Card -->
@@ -108,46 +113,304 @@
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Explorá nuestras disciplinas diseñadas para potenciar tu talento, desde la iniciación hasta el nivel profesional.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Class Card 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- 1. Ballet -->
                 <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
-                    <img src="img/clases/arabe_juvenil.jpg" alt="Arabe Juvenil" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
-                        <h3 class="text-2xl font-bold mb-1">Danza Árabe</h3>
-                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Juvenil • Técnica y Coreografía</p>
-                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    <img src="img/clases/Ballet%20juvenil%20(3).jpg" alt="Ballet" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Ballet</h3>
                     </div>
                 </div>
 
-                <!-- Class Card 2 -->
-                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll delay-100">
+                <!-- 2. Ballet infantil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
-                    <img src="img/clases/danzas_arabes_infantil.png" alt="Arabe Infantil" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
-                        <h3 class="text-2xl font-bold mb-1">Iniciación Árabe</h3>
-                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Infantil • Juegos y Ritmo</p>
-                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    <img src="img/clases/Ballet%20infantil.jpg" alt="Ballet infantil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Ballet Infantil</h3>
                     </div>
                 </div>
 
-                <!-- Class Card 3 -->
-                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll delay-200">
+                <!-- 3. Ballet juvenil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
-                    <img src="img/clases/jazz_teens.jpg" alt="Jazz Teens" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
-                        <h3 class="text-2xl font-bold mb-1">Jazz & Lyrical</h3>
-                        <p class="text-sm text-gray-200 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">Teens & Adultos • Expresión</p>
-                        <span class="text-xs font-bold uppercase tracking-wider border border-white/50 px-3 py-1 rounded-full">Ver más</span>
+                    <img src="img/clases/Ballet%20juvenil.jpg" alt="Ballet juvenil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Ballet Juvenil</h3>
                     </div>
                 </div>
+
+                <!-- 4. Iniciacion a la danza -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Iniciacion%20a%20la%20danza.jpg" alt="Iniciacion a la danza" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Iniciación a la Danza</h3>
+                    </div>
+                </div>
+
+                <!-- 5. Arabe infantil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Arabe%20infantil.jpg" alt="Arabe infantil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Árabe Infantil</h3>
+                    </div>
+                </div>
+
+                <!-- 6. Arabe juvenil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Arabe%20juvenil.jpg" alt="Arabe juvenil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Árabe Juvenil</h3>
+                    </div>
+                </div>
+
+                <!-- 7. Arabe adulto -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Arabe%20Adulto.jpg" alt="Arabe adulto" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Árabe Adulto</h3>
+                    </div>
+                </div>
+
+                <!-- 8. Jazz infantil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Jazz%20infantil.jpg" alt="Jazz infantil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Jazz Infantil</h3>
+                    </div>
+                </div>
+
+                <!-- 9. Jazz juvenil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Jazz%20juvenil.jpg" alt="Jazz juvenil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Jazz Juvenil</h3>
+                    </div>
+                </div>
+
+                <!-- 10. Jazz adulto -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Jazz.jpg" alt="Jazz adulto" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Jazz Adulto</h3>
+                    </div>
+                </div>
+
+                <!-- 11. Contemporaneo -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Contemporaneo.jpg" alt="Contemporaneo" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Contemporáneo</h3>
+                    </div>
+                </div>
+
+                <!-- 12. Danza fusion inicial -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Contemporaneo%20(2).jpg" alt="Danza fusion inicial" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Danza Fusión Inicial</h3>
+                    </div>
+                </div>
+
+                <!-- 13. Urbano infantil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Urbano%20juvenil%20(2).jpg" alt="Urbano infantil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Urbano Infantil</h3>
+                    </div>
+                </div>
+
+                <!-- 14. Urbano juvenil -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Urbano%20juvenil.jpg" alt="Urbano juvenil" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Urbano Juvenil</h3>
+                    </div>
+                </div>
+
+                <!-- 15. Reggaeton -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Reggaeton.jpg" alt="Reggaeton" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">Reggaetón</h3>
+                    </div>
+                </div>
+
+                <!-- 16. Kpop -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer animate-on-scroll">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
+                    <img src="img/clases/Kpop.jpg" alt="Kpop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-5 z-20 text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold mb-1">K-pop</h3>
+                    </div>
+                </div>
+
             </div>
             
             <div class="mt-12 text-center">
-                <a href="#contacto" class="inline-flex items-center text-pink-700 font-bold hover:text-pink-900 hover:underline transition">
-                    Ver grilla completa de horarios <i class="fas fa-arrow-right ml-2"></i>
+                <a href="#horarios" class="inline-flex items-center text-pink-700 font-bold hover:text-pink-900 hover:underline transition">
+                    Ver grilla completa de horarios <i class="fas fa-arrow-down ml-2"></i>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Horarios Section -->
+    <section id="horarios" class="py-24 bg-pink-50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Grilla de Horarios</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Vení a bailar y disfrutar de tus clases favoritas. ¡Te esperamos todos los días!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Lunes -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border-t-4 border-pink-500 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i class="far fa-calendar-alt text-pink-500 mr-3"></i> Lunes</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ensayo</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">17:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Danza Fusión Inicial</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">18:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-gray-700">Árabe Juvenil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">19:00 hs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Martes -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border-t-4 border-pink-500 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i class="far fa-calendar-alt text-pink-500 mr-3"></i> Martes</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ballet</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">17:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Jazz Juvenil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">18:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-gray-700">Contemporáneo</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">19:00 hs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Miercoles -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border-t-4 border-pink-500 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i class="far fa-calendar-alt text-pink-500 mr-3"></i> Miércoles</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ensayo</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">17:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Iniciación a la Danza</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">18:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-gray-700">Urbano Juvenil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">19:00 hs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Jueves -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border-t-4 border-pink-500 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i class="far fa-calendar-alt text-pink-500 mr-3"></i> Jueves</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ensayo</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">17:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ballet Infantil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">18:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-gray-700">Urbano Juvenil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">19:30 hs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Viernes -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border-t-4 border-pink-500 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i class="far fa-calendar-alt text-pink-500 mr-3"></i> Viernes</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Ballet Juvenil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">17:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                            <span class="font-medium text-gray-700">Jazz Infantil</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">18:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-gray-700">Árabe Adultos</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-bold">19:00 hs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sabado -->
+                <div class="bg-indigo-900 text-white rounded-3xl p-8 shadow-xl border-t-4 border-indigo-400 hover:shadow-2xl transition-shadow duration-300 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i class="far fa-star text-indigo-300 mr-3"></i> Sábado</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">K-pop</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">10:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">Árabe Infantil</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">11:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">Urbano Infantil</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">12:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">Reggaetón Juvenil</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">13:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">Jazz Adulto</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">14:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-indigo-800 pb-3">
+                            <span class="font-medium text-indigo-100">Árabe Adulto</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">15:00 hs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="font-medium text-indigo-100">Árabe Adulto</span>
+                            <span class="bg-indigo-800 text-indigo-200 px-3 py-1 rounded-full text-sm font-bold">16:00 hs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </section>
     
